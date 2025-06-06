@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Master Vishal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Yoga Master Vishal</h1>
+    <p>Certified Yoga Instructor | 6+ Years Experience | Global Reach</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <img src="yoga1.jpg" alt="Vishal Yoga" class="profile-pic">
+      <h2>About Vishal</h2>
+      <p>
+        Vishal M from Badami, Karnataka, is a professional yoga trainer with M.Sc. in Yogic Science. He has taught both in India and abroad. 
+        His specialties include Hatha, Ashtanga, Brick Yoga, and Meditation.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <img src="yoga2.jpg" alt="Yoga Pose 1">
+      <img src="yoga3.jpg" alt="Yoga Pose 2">
+    </section>
+
+    <section class="video">
+  <h2>Demo Videos</h2>
+
+  <video width="480" controls>
+    <source src="yogavideo1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video width="480" controls>
+    <source src="yogavideo2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+    <section class="form">
+      <h2>Join a Yoga Class</h2>
+      <form onsubmit="sendWhatsAppMessage(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required><br>
+        <input type="tel" id="phone" placeholder="Phone/WhatsApp Number" required><br>
+        <textarea id="message" placeholder="Your Message or Interest" required></textarea><br>
+        <button type="submit">Send on WhatsApp</button>
+      </form>
+
+      <p>📧 Or send your info to: <a href="mailto:vishalmb1998@gmail.com">vishalmb1998@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yoga by Vishal | Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    function sendWhatsAppMessage() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const whatsappNumber = "917259783971"; // Vishal's number
+
+      const url = `https://wa.me/${whatsappNumber}?text=Hello Vishal, my name is ${encodeURIComponent(name)}. My contact: ${encodeURIComponent(phone)}. Message: ${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
